@@ -1,1 +1,39 @@
-<p>setlist-list works!</p>
+@if (setlists()) {
+  <div class="row">
+    <div class="col">
+      <h2>Listing all setlists</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ul class="list-group">
+        @for (setlist of setlists(); track setlist.id) {
+          <li class="list-group-item">
+            <div class="list-info">
+              <a [routerLink]="'/setlists/' + setlist.id">{{ setlist.name }}</a
+              ><br />
+              {{ formatDate(setlist.date) }} -
+              {{ setlist.songs?.length + ' song' + (setlist.songs?.length !== 1 ? 's' : '') }}
+            </div>
+            <div>
+              <div class="action-container">
+                <a [routerLink]="'/setlists/edit/' + setlist.id">
+                  <i class="fa fa-edit edit-btn"></i>
+                </a>
+                <i class="delete-btn fa fa-trash" (click)="deleteSetlist(setlist.id)"></i>
+              </div>
+            </div>
+          </li>
+        }
+        
+        @if (setlists().length === 0) {
+          <p class="notice">No setlists found</p>
+        }
+      </ul>
+    </div>
+  </div>
+}
+
+@if (setlists() === null) {
+  <p class="notice">Loading...</p>
+}

@@ -17,6 +17,8 @@
     "module": "preserve",
     "paths": {
       "@bpmedley/shared/components": ["src/app/shared/components"],
+      "@bpmedley/shared/helpers": ["src/app/shared/helpers"],
+      "@bpmedley/shared/interfaces": ["src/app/shared/interfaces"],
       "@bpmedley/shared/services": ["src/app/shared/services"],
       "@bpmedley/features/setlist": ["src/app/features/setlist"],
       "@bpmedley/features/song": ["src/app/features/song"]
