@@ -1,0 +1,27 @@
+body {
+  background-color: $body-bg;
+	color: $body-text-color;
+	padding-bottom: 32px;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+select {
+  cursor: pointer;
+}
+
+hr {
+  border-top-color: #666;
+}
+
+.notice {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+}
+
+.list-group a {
+  color: $blue;
+}

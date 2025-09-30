@@ -6,6 +6,5 @@ import { Alert, Navbar } from '@bpmedley/shared/components';
   selector: 'app-root',
   imports: [RouterOutlet, Alert, Navbar],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
 })
 export class App {}
