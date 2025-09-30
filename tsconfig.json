@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -13,7 +14,13 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "@bpmedley/shared/components": ["src/app/shared/components"],
+      "@bpmedley/shared/services": ["src/app/shared/services"],
+      "@bpmedley/features/setlist": ["src/app/features/setlist"],
+      "@bpmedley/features/song": ["src/app/features/song"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
